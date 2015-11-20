@@ -1,0 +1,31 @@
+buildscript {
+
+    repositories {
+        mavenLocal()
+        jcenter()
+        mavenCentral()
+    }
+
+}
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.abs.tract'
+version = '0.0.1-SNAPSHOT'
+
+
+repositories {
+    mavenLocal()
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile "org.spockframework:spock-core:$spockVersion"
+}
+
+wrapper {
+    gradleVersion '2.7'
+}
